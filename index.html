@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Collaborative News Feed</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: auto; }
+        #messages-list > div { border-bottom: 1px solid #ccc; padding: 10px; }
+        #post-area, #messages-area { margin-top: 20px; }
+        .author { font-size: 0.9em; color: #888; }
+        .time { font-size: 0.8em; color: #bbb; }
+    </style>
 </head>
 <body>
     <!-- Authentication Area -->
@@ -23,7 +30,7 @@
         <div id="user-email"></div>
     </div>
 
-    <!-- Post Message Area (Only show when logged in) -->
+    <!-- Post Message Area (only when logged in) -->
     <div id="post-area" style="display:none;">
         <form id="message-form">
             <input type="text" id="message-input" placeholder="Write your message..." required />
@@ -37,7 +44,7 @@
         <div id="messages-list"></div>
     </div>
 
-    <!-- Firebase SDKs: App, Auth, Firestore -->
+    <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
