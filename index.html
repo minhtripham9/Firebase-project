@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collaborative News Feed</title>
+</head>
+<body>
+    <!-- Authentication Area -->
+    <div id="auth-area">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="email" id="signup-email" placeholder="Email" required />
+            <input type="password" id="signup-password" placeholder="Password" required />
+            <button type="submit">Sign Up</button>
+        </form>
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required />
+            <input type="password" id="login-password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+        <button id="logout-btn" style="display:none;">Logout</button>
+        <div id="user-email"></div>
+    </div>
+
+    <!-- Post Message Area (Only show when logged in) -->
+    <div id="post-area" style="display:none;">
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Write your message..." required />
+            <button type="submit">Post</button>
+        </form>
+    </div>
+
+    <!-- Display Messages Area -->
+    <div id="messages-area">
+        <h2>News Feed</h2>
+        <div id="messages-list"></div>
+    </div>
+
+    <!-- Firebase SDKs: App, Auth, Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <!-- Link to your JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
